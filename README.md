@@ -18,7 +18,7 @@ None
 
 ## Changelog
 
-See the changelog.md in this repo
+[See the changelog.md in this repo](https://github.com/sillybillypiggy/Auto-XML/blob/master/CHANGELOG.md)
 
 ## Helping
 
