@@ -1,0 +1,23 @@
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\bin\Debug\Auto-XML.exe
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\bin\Debug\Auto-XML.pdb
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\bin\Debug\Auto-XML.xml
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\Auto_XML.Resources.resources
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\Auto-XML.exe
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\Auto-XML.xml
+C:\Users\James\AppData\Local\Temporary Projects\Auto-XML\obj\x86\Debug\Auto-XML.pdb
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.exe
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.xml
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.pdb
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\bin\Debug\Auto-XML.exe
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\bin\Debug\Auto-XML.pdb
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\bin\Debug\Auto-XML.xml
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\Auto_XML.Resources.resources
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\James\Documents\Visual Studio 2010\Projects\Auto-XML\Auto-XML\Auto-XML\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\James\Documents\GitHub\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.exe
+C:\Users\James\Documents\GitHub\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.xml
+C:\Users\James\Documents\GitHub\Auto-XML\Auto-XML\obj\x86\Debug\Auto-XML.pdb
