@@ -121,10 +121,27 @@ Sub MainMenu()
     Sub NewFiletwo()
         PrintLine(2, "<kits>")
 
+        WriteLine("What is the kit called?")
+        userinput = ReadLine()
 
-        Console.WriteLine("What is in slot zero?")
+        PrintLine(2, "<kit name=" & Chr(34) & userinput & Chr(34) & ">")
+        Do
+            Console.WriteLine("Enter an item, or type X to finish")
+            If userinput = "X" Or userinput = "x" Then
+                Newfilethree()
+            Else
+
+                Console.WriteLine()
+                PrintLine(2, "<item slot=" & Chr(34) & "0" & Chr(34) & ">" & userinput & "</item>")
+            End If
+
+        Loop
 
 
+
+
+    End Sub
+    Sub Newfilethree()
 
     End Sub
     Sub EditFile()
