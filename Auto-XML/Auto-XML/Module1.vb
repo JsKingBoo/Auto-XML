@@ -91,18 +91,25 @@ Sub MainMenu()
         WriteLine("Currently editing file:" & newfilename)
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the name of yor map")
+        ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         'Prints the map proto.
         PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
         PrintLine(2, "<name>" & userinput & "</name>")
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the map version")
+        ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<version>" & userinput & "<\version>")
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the objective")
+        ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<objective>" & userinput & "</objective>")
         PrintLine(2, "<authors>")
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("Enter the authours name")
+        ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<author>" & userinput & "</author>")
         'Add support for mutiple autors using loop
