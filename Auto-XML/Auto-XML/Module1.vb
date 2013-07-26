@@ -62,8 +62,6 @@ Sub MainMenu()
         Dim filename As String
         Dim newfilename As String
         Dim path As String
-        Dim Teamnumber As Integer
-        Dim TeamsMade As Integer
 
         Console.Clear()
         WriteLine("Please name your new file.")
