@@ -78,17 +78,32 @@ Sub MainMenu()
 
         FileOpen(2, path & "\Auto-XML\" & newfilename & ".txt", OpenMode.Output)
 
-        Console.WriteLine("File Created. Press Enter To continue")
+        WriteLine("File Created. Press Enter To continue")
 
         ReadLine()
         Clear()
         ForegroundColor = ConsoleColor.Blue
         WriteLine("Currently editing file:" & newfilename)
         ForegroundColor = ConsoleColor.Yellow
-        Console.WriteLine("Please enter the name of yor map")
-        userinput = Console.ReadLine
+        WriteLine("Please enter the name of yor map")
+        userinput = ReadLine()
         'Prints the map proto.
         PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
+        PrintLine(2, "<name>" & userinput & "</name>")
+        WriteLine("Please enter the map version")
+        userinput = ReadLine()
+        PrintLine(2, "<version>" & userinput & "<\version>")
+        WriteLine("Please enter the objective")
+        userinput = ReadLine()
+        PrintLine(2, "<objective>" & userinput & "</objective>")
+        PrintLine(2, "<authors>")
+        WriteLine("Enter the authours name")
+        userinput = ReadLine()
+        PrintLine(2, "<author>" & userinput & "</author>")
+        'Add support for mutiple autors using loop
+        PrintLine(2, "</authors>")
+
+
 
     End Sub
     Sub EditFile()
