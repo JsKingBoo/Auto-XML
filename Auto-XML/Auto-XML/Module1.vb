@@ -112,10 +112,17 @@ Sub MainMenu()
         PrintLine(2, "<author>" & userinput & "</author>")
         'Add support for mutiple autors using loop
         PrintLine(2, "</authors>")
+
+        PrintLine(2, "<contributors>")
+        PrintLine(2, "<contributor contribution=" & Chr(34)& "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>"
     End Sub
 
 
     Sub NewFiletwo()
+        PrintLine(2, "<kits>")
+
+
+        Console.WriteLine("What is in slot zero?")
 
 
 
