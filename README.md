@@ -11,15 +11,12 @@ An automatic XML generator for PGM
 
 ## Current features
 
-None
-
-## Planned Features
-
-None
-
-## Changelog
-
-[See the changelog.md in this repo](https://github.com/sillybillypiggy/Auto-XML/blob/master/CHANGELOG.md)
+* Map proto auto-adding
+* Map name
+* Map version
+* Objective
+* Author (single only)
+* Teams (Brocken)
 
 ## Helping
 
