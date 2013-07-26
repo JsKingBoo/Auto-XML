@@ -114,46 +114,119 @@ Sub MainMenu()
         PrintLine(2, "<author>" & userinput & "</author>")
         'Add support for mutiple autors using loop
         PrintLine(2, "</authors>")
-        'Teams
-        'Using American English :<, but it'll confuse me later if I don't
-        WriteLine("Please enter a team color")
-        WriteLine("How many teams?")
-        Teamnumber = ReadLine()
-
-        Do
-            WriteLine("Please enter the team colour")
-            WriteLine("Colours:")
-            WriteLine("black")
-            WriteLine("dark blue")
-            WriteLine("dark green")
-            WriteLine("dark aqua")
-            WriteLine("dark red (Note: Usually used for Red team)")
-            WriteLine("dark purple")
-            WriteLine("gold")
-            WriteLine("gray")
-            WriteLine("dark gray")
-            WriteLine("blue")
-            WriteLine("green")
-            WriteLine("aqua")
-            WriteLine("red")
-            WriteLine("light purple")
-            WriteLine("yellow")
-            WriteLine("white")
-            WriteLine("Please enter the team color from one above")
-            'insert checking system later
-            userinput = ReadLine()
-            WriteLine("Please enter the team size")
-            userinputtwo = ReadLine()
-            WriteLine("Please enter the team name")
-            userinputthree = ReadLine()
-            PrintLine(2, "<teams>")
-            PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
+    End Sub
 
 
-        Loop Until Teamnumber = TeamsMade
+    Sub NewFiletwo()
+
+
 
     End Sub
     Sub EditFile()
+
+    End Sub
+    Sub Teams()
+        'Teams
+        'Using American English :<, but it'll confuse me later if I don't
+
+        WriteLine("Please enter the team colour")
+        WriteLine("Colours:")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("black")
+        ForegroundColor = ConsoleColor.DarkBlue
+        WriteLine("dark blue")
+        ForegroundColor = ConsoleColor.DarkGreen
+        WriteLine("dark green")
+        ForegroundColor = ConsoleColor.DarkCyan
+        WriteLine("dark aqua")
+        ForegroundColor = ConsoleColor.DarkRed
+        WriteLine("dark red (Note: Usually used for Red team)")
+        ForegroundColor = ConsoleColor.DarkMagenta
+        WriteLine("dark purple")
+        ForegroundColor = ConsoleColor.DarkYellow
+        WriteLine("gold")
+        ForegroundColor = ConsoleColor.Gray
+        WriteLine("gray")
+        ForegroundColor = ConsoleColor.DarkGray
+        WriteLine("dark gray")
+        ForegroundColor = ConsoleColor.Blue
+        WriteLine("blue")
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("green")
+        ForegroundColor = ConsoleColor.Cyan
+        WriteLine("aqua")
+        ForegroundColor = ConsoleColor.Red
+        WriteLine("red")
+        ForegroundColor = ConsoleColor.Magenta
+        WriteLine("light purple")
+            ForegroundColor = ConsoleColor.Yellow)
+        WriteLine("yellow")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("white")
+        ForegroundColor = ConsoleColor.Yellow
+        WriteLine("Please enter the team color from one above")
+        'insert checking system later
+        userinput = ReadLine()
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("Please enter the team size")
+        userinputtwo = ReadLine()
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("Please enter the team name")
+        userinputthree = ReadLine()
+        PrintLine(2, "<teams>")
+        PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
+
+        'Teams
+        'Using American English :<, but it'll confuse me later if I don't
+
+        WriteLine("Please enter the team colour")
+        WriteLine("Colours:")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("black")
+        ForegroundColor = ConsoleColor.DarkBlue
+        WriteLine("dark blue")
+        ForegroundColor = ConsoleColor.DarkGreen
+        WriteLine("dark green")
+        ForegroundColor = ConsoleColor.DarkCyan
+        WriteLine("dark aqua")
+        ForegroundColor = ConsoleColor.DarkRed
+        WriteLine("dark red (Note: Usually used for Red team)")
+        ForegroundColor = ConsoleColor.DarkMagenta
+        WriteLine("dark purple")
+        ForegroundColor = ConsoleColor.DarkYellow
+        WriteLine("gold")
+        ForegroundColor = ConsoleColor.Gray
+        WriteLine("gray")
+        ForegroundColor = ConsoleColor.DarkGray
+        WriteLine("dark gray")
+        ForegroundColor = ConsoleColor.Blue
+        WriteLine("blue")
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("green")
+        ForegroundColor = ConsoleColor.Cyan
+        WriteLine("aqua")
+        ForegroundColor = ConsoleColor.Red
+        WriteLine("red")
+        ForegroundColor = ConsoleColor.Magenta
+        WriteLine("light purple")
+            ForegroundColor = ConsoleColor.Yellow)
+        WriteLine("yellow")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("white")
+        ForegroundColor = ConsoleColor.Yellow
+        WriteLine("Please enter the team color from one above")
+        'insert checking system later
+        userinput = ReadLine()
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("Please enter the team size")
+        userinputtwo = ReadLine()
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("Please enter the team name")
+        userinputthree = ReadLine()
+        PrintLine(2, "<teams>")
+        PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
+
+        NewFiletwo()
 
     End Sub
 
