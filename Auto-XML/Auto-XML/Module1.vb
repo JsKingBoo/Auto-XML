@@ -114,7 +114,7 @@ Sub MainMenu()
         PrintLine(2, "</authors>")
 
         PrintLine(2, "<contributors>")
-        PrintLine(2, "<contributor contribution=" & Chr(34)& "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>"
+        PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>")
     End Sub
 
 
@@ -185,7 +185,7 @@ Sub MainMenu()
         WriteLine("red")
         ForegroundColor = ConsoleColor.Magenta
         WriteLine("light purple")
-            ForegroundColor = ConsoleColor.Yellow)
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("yellow")
         ForegroundColor = ConsoleColor.White
         WriteLine("white")
@@ -235,7 +235,7 @@ Sub MainMenu()
         WriteLine("red")
         ForegroundColor = ConsoleColor.Magenta
         WriteLine("light purple")
-            ForegroundColor = ConsoleColor.Yellow)
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("yellow")
         ForegroundColor = ConsoleColor.White
         WriteLine("white")
