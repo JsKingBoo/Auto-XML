@@ -17,6 +17,7 @@ An automatic XML generator for PGM
 * Objective
 * Author (single only)
 * Teams (2 only)
+* Kits
 
 ## Helping
 
