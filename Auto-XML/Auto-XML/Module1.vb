@@ -2,27 +2,19 @@
 Imports System.Console
 Module Module1
     Dim menuoption As Integer
-Sub Main()
+    Dim userinput As String
+    Sub Main()
+        Dim path As String
+        'Works out if first time setup is needed.
+        path = GetFolderPath(SpecialFolder.MyDocuments)
+        If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
+            FirstTimeSetup()
+        Else
+            MainMenu()
 
-        WriteLine("Welcome to the PGM XML creator, Auto-XML by sillybillypiggy")
-        WriteLine("Intended to help you to easily create XML files.")
-        WriteLine("Is this your first time using the program on this user/computer?")
-        WriteLine("1 - Yes")
-        WriteLine("2 - No")
-        menuoption = ReadLine()
+        End If
 
-    If menuoption = "1" Then
-        FirstTimeSetup()
-    ElseIf menuoption = "2" Then
-        MainMenu()
-    Else
-            WriteLine("Well done on not reading. I said 1 or 2. Press Enter.")
-        ReadLine()
-        End
-
-    End If
-
-End Sub
+    End Sub
 Sub FirstTimeSetup()
     Dim path As String
     Dim filename As String
@@ -49,7 +41,6 @@ Sub FirstTimeSetup()
 
 End Sub
 Sub MainMenu()
-        WriteLine("If first time setup has not been performed please close the program and do it")
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Welcome to Auto-XML for PGM")
         WriteLine("Designed to help you write XML files")
@@ -94,8 +85,10 @@ Sub MainMenu()
         ForegroundColor = ConsoleColor.Blue
         WriteLine("Currently editing file:" & newfilename)
         ForegroundColor = ConsoleColor.Yellow
-
-
+        Console.WriteLine("Please enter the name of yor map")
+        userinput = Console.ReadLine
+        'Prints the map proto.
+        PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
 
     End Sub
     Sub EditFile()
