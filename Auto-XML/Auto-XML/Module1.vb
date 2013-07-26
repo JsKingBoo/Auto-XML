@@ -140,7 +140,7 @@ Sub MainMenu()
                 PrintLine(2, "<item slot=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinput & "</item>")
             End If
 
-        Loop Until 
+        Loop
 
 
 
