@@ -4,6 +4,7 @@
 * **Important:** when using quotation marks, these will not appear in the console/document you are printing to due to the way VB works. Instead type something like Console.Writeline(Chr(34) & "text" & Chr(34)). This would display "text".
 * Please have a basic understanding of VB before doing anything.
 * Imports System.Console is on, which means you do not have to put "console" before everything
+* Please download VB, and make pull requests from your computer, it modifies quite a few other files, and just changing module1.VB will make the program fail.
 
 ## Issues
 
