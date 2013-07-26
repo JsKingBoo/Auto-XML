@@ -128,14 +128,15 @@ Sub MainMenu()
 
         PrintLine(2, "<kit name=" & Chr(34) & userinput & Chr(34) & ">")
         Do
-            Console.WriteLine("Enter an item, or type X to finish")
+            WriteLine("Enter an item, or type X to finish")
             If userinput = "X" Or userinput = "x" Then
                 Newfilethree()
             Else
 
                 Console.WriteLine("Which slot do you want this in?")
-                userinputtwo = Console.ReadLine
-                Console.WriteLine("Which item?")
+                userinputtwo = ReadLine()
+                WriteLine("Which item?")
+                userinput = ReadLine()
                 PrintLine(2, "<item slot=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinput & "</item>")
             End If
 
@@ -146,8 +147,8 @@ Sub MainMenu()
 
     End Sub
     Sub Newfilethree()
-        Console.WriteLine("It worked!")
-        Console.ReadLine()
+        WriteLine("It worked!")
+        ReadLine()
 
     End Sub
     Sub EditFile()
