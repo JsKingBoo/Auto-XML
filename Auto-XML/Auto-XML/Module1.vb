@@ -115,6 +115,8 @@ Sub MainMenu()
 
         PrintLine(2, "<contributors>")
         PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>")
+        PrintLine(2, "<contributors>")
+        Teams()
     End Sub
 
 
