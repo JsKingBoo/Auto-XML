@@ -3,6 +3,8 @@ Imports System.Console
 Module Module1
     Dim menuoption As Integer
     Dim userinput As String
+    Dim userinputtwo As String
+    Dim userinputthree As String
     Sub Main()
         Dim path As String
         'Works out if first time setup is needed.
@@ -60,6 +62,9 @@ Sub MainMenu()
         Dim filename As String
         Dim newfilename As String
         Dim path As String
+        Dim Teamnumber As Integer
+        Dim TeamsMade As Integer
+
         Console.Clear()
         WriteLine("Please name your new file.")
         Console.WriteLine("If the program crashes in this process, please re-perform first time setup.")
@@ -102,8 +107,43 @@ Sub MainMenu()
         PrintLine(2, "<author>" & userinput & "</author>")
         'Add support for mutiple autors using loop
         PrintLine(2, "</authors>")
+        'Teams
+        'Using American English :<, but it'll confuse me later if I don't
+        WriteLine("Please enter a team color")
+        WriteLine("How many teams?")
+        Teamnumber = ReadLine()
+
+        Do
+            WriteLine("Please enter the team colour")
+            WriteLine("Colours:")
+            WriteLine("black")
+            WriteLine("dark blue")
+            WriteLine("dark green")
+            WriteLine("dark aqua")
+            WriteLine("dark red (Note: Usually used for Red team)")
+            WriteLine("dark purple")
+            WriteLine("gold")
+            WriteLine("gray")
+            WriteLine("dark gray")
+            WriteLine("blue")
+            WriteLine("green")
+            WriteLine("aqua")
+            WriteLine("red")
+            WriteLine("light purple")
+            WriteLine("yellow")
+            WriteLine("white")
+            WriteLine("Please enter the team color from one above")
+            'insert checking system later
+            userinput = ReadLine()
+            WriteLine("Please enter the team size")
+            userinputtwo = ReadLine()
+            WriteLine("Please enter the team name")
+            userinputthree = ReadLine()
+            PrintLine(2, "<teams>")
+            PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
 
 
+        Loop Until Teamnumber = TeamsMade
 
     End Sub
     Sub EditFile()
