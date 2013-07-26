@@ -16,7 +16,7 @@ An automatic XML generator for PGM
 * Map version
 * Objective
 * Author (single only)
-* Teams (Brocken)
+* Teams (2 only)
 
 ## Helping
 
