@@ -131,8 +131,10 @@ Sub MainMenu()
                 Newfilethree()
             Else
 
-                Console.WriteLine()
-                PrintLine(2, "<item slot=" & Chr(34) & "0" & Chr(34) & ">" & userinput & "</item>")
+                Console.WriteLine("Which slot do you want this in?")
+                userinputtwo = Console.ReadLine
+                Console.WriteLine("Which item?")
+                PrintLine(2, "<item slot=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinput & "</item>")
             End If
 
         Loop
@@ -142,6 +144,8 @@ Sub MainMenu()
 
     End Sub
     Sub Newfilethree()
+        Console.WriteLine("It worked!")
+        Console.ReadLine()
 
     End Sub
     Sub EditFile()
