@@ -129,7 +129,7 @@ Sub MainMenu()
         PrintLine(2, "<kit name=" & Chr(34) & userinput & Chr(34) & ">")
         Do
             WriteLine("Enter an item, or type X to finish")
-            If userinput = "X" Or userinput = "x" Then
+            If userinput = "X" Or userinput = "x" Or userinputtwo = "x" Or userinputtwo = "X" Then
                 Newfilethree()
             Else
 
@@ -140,7 +140,7 @@ Sub MainMenu()
                 PrintLine(2, "<item slot=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinput & "</item>")
             End If
 
-        Loop
+        Loop Until 
 
 
 
