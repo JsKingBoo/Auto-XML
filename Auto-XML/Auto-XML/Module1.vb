@@ -8,41 +8,41 @@ Module Module1
 	'color array. no idea how to do multiline commands -JSKB
 	Dim allTheColors As String() = {"black", "dark blue", "dark green", "dark aqua", "dark red", "dark purple", "gold", "gray", "dark gray", "blue", "green", "aqua", "red", "light purple", "yellow", "while"}
 	
-	Sub Main() 'What happens first
-		Dim path As String 'Is your indent key broken or what?! :P -JSKB
-        'Works out if first time setup is needed.
-        path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
-        If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
-            FirstTimeSetup()
-        Else
-            MainMenu()
-        End If
-    End Sub
-Sub FirstTimeSetup() 'Makes file path
-    Dim path As String
-    Dim filename As String
-    MsgBox("Performing first time setup...", MsgBoxStyle.Information)
-
-    'Creates folder in "My Documents" for XML files to be placed into.
-    path = GetFolderPath(SpecialFolder.MyDocuments)
-
-    If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
-        System.IO.Directory.CreateDirectory(path & "\Auto-XML")
-    End If
-    'Creates a CSV file to store filenames in
-    filename = ("\Auto-XML\filenames.csv")
-
-    FileOpen(1, path & filename, OpenMode.Output)
-    FileClose(1)
-
-        WriteLine("First time setup complete")
-
-    MsgBox("A folder has been created in your documents folder named Auto-XML. It will contain all your XML files, and also some program files.", MsgBoxStyle.Information)
-
-    MainMenu()
-
-
+Sub Main() 'What happens first
+	Dim path As String 'Is your indent key broken or what?! :P -JSKB
+	'Works out if first time setup is needed.
+	path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
+       	If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
+		FirstTimeSetup()
+	Else
+		MainMenu()
+	End If
 End Sub
+Sub FirstTimeSetup() 'Makes file path
+	Dim path As String
+	Dim filename As String
+		
+	MsgBox("Performing first time setup...", MsgBoxStyle.Information)
+		
+	'Creates folder in "My Documents" for XML files to be placed into.
+	path = GetFolderPath(SpecialFolder.MyDocuments)
+
+	If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
+		System.IO.Directory.CreateDirectory(path & "\Auto-XML")
+	End If
+		
+	'Creates a CSV file to store filenames in
+	filename = ("\Auto-XML\filenames.csv")
+
+	FileOpen(1, path & filename, OpenMode.Output)
+	FileClose(1)
+	
+	WriteLine("First time setup complete")
+	MsgBox("A folder has been created in your documents folder named Auto-XML. It will contain all your XML files, and also some program files.", MsgBoxStyle.Information)
+
+	MainMenu()
+End Sub
+	
 Sub MainMenu()
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Welcome to Auto-XML for PGM")
@@ -57,8 +57,8 @@ Sub MainMenu()
         If menuoption = "1" Then
             NewFile()
         End If
-    End Sub
-    Sub NewFile()
+End Sub
+    Sub NewFile() 'suddenly, indent
         Dim filename As String
         Dim newfilename As String
         Dim path As String
@@ -213,47 +213,11 @@ Sub MainMenu()
     Sub Teams()
         'Teams
         'Using American English :<, but it'll confuse me later if I don't
-        'I'm sorry, but who the ruddy **** are you? ;) -JSKB
 
-        WriteLine("Please enter the team colour")
-        WriteLine("Colors:")
-        ForegroundColor = ConsoleColor.White
-        WriteLine("black")
-        ForegroundColor = ConsoleColor.DarkBlue
-        WriteLine("dark blue")
-        ForegroundColor = ConsoleColor.DarkGreen
-        WriteLine("dark green")
-        ForegroundColor = ConsoleColor.DarkCyan
-        WriteLine("dark aqua")
-        ForegroundColor = ConsoleColor.DarkRed
-        WriteLine("dark red (Note: Usually used for Red team)")
-        ForegroundColor = ConsoleColor.DarkMagenta
-        WriteLine("dark purple")
-        ForegroundColor = ConsoleColor.DarkYellow
-        WriteLine("gold")
-        ForegroundColor = ConsoleColor.Gray
-        WriteLine("gray")
-        ForegroundColor = ConsoleColor.DarkGray
-        WriteLine("dark gray")
-        ForegroundColor = ConsoleColor.Blue
-        WriteLine("blue")
-        ForegroundColor = ConsoleColor.Green
-        WriteLine("green")
-        ForegroundColor = ConsoleColor.Cyan
-        WriteLine("aqua")
-        ForegroundColor = ConsoleColor.Red
-        WriteLine("red")
-        ForegroundColor = ConsoleColor.Magenta
-        WriteLine("light purple")
-        ForegroundColor = ConsoleColor.Yellow
-        WriteLine("yellow")
-        ForegroundColor = ConsoleColor.White
-        WriteLine("white")
-        ForegroundColor = ConsoleColor.Yellow
-        WriteLine("Please enter the team color from one above")
+	listColors()
         
         'insert system checking later
-		'Was going to do system checking, but too lazy. Hey, I created an array -JSKB
+	'Was going to do system checking, but too lazy. Hey, I created an array -JSKB
         
         userinput = ReadLine()
         ForegroundColor = ConsoleColor.Green
@@ -268,42 +232,8 @@ Sub MainMenu()
         'Teams
         'Using American English :<, but it'll confuse me later if I don't
 
-        WriteLine("Please enter the team colour")
-        WriteLine("Colours:")
-        ForegroundColor = ConsoleColor.White
-        WriteLine("black")
-        ForegroundColor = ConsoleColor.DarkBlue
-        WriteLine("dark blue")
-        ForegroundColor = ConsoleColor.DarkGreen
-        WriteLine("dark green")
-        ForegroundColor = ConsoleColor.DarkCyan
-        WriteLine("dark aqua")
-        ForegroundColor = ConsoleColor.DarkRed
-        WriteLine("dark red (Note: Usually used for Red team)")
-        ForegroundColor = ConsoleColor.DarkMagenta
-        WriteLine("dark purple")
-        ForegroundColor = ConsoleColor.DarkYellow
-        WriteLine("gold")
-        ForegroundColor = ConsoleColor.Gray
-        WriteLine("gray")
-        ForegroundColor = ConsoleColor.DarkGray
-        WriteLine("dark gray")
-        ForegroundColor = ConsoleColor.Blue
-        WriteLine("blue")
-        ForegroundColor = ConsoleColor.Green
-        WriteLine("green")
-        ForegroundColor = ConsoleColor.Cyan
-        WriteLine("aqua")
-        ForegroundColor = ConsoleColor.Red
-        WriteLine("red")
-        ForegroundColor = ConsoleColor.Magenta
-        WriteLine("light purple")
-        ForegroundColor = ConsoleColor.Yellow
-        WriteLine("yellow")
-        ForegroundColor = ConsoleColor.White
-        WriteLine("white")
-        ForegroundColor = ConsoleColor.Yellow
-        WriteLine("Please enter the team color from one above")
+        listColors
+        
         'insert checking system later
         userinput = ReadLine()
         ForegroundColor = ConsoleColor.Yellow
@@ -321,6 +251,45 @@ Sub MainMenu()
 
         NewFiletwo()
 
+    End Sub
+    
+    Sub listColors()
+    	WriteLine("Please enter the team colour")
+        WriteLine("Colors:")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("black")
+        ForegroundColor = ConsoleColor.DarkBlue
+        WriteLine("dark blue (Note: Usually for Blue team)")
+        ForegroundColor = ConsoleColor.DarkGreen
+        WriteLine("dark green")
+        ForegroundColor = ConsoleColor.DarkCyan
+        WriteLine("dark aqua")
+        ForegroundColor = ConsoleColor.DarkRed
+        WriteLine("dark red (Note: Usually used for Red team)")
+        ForegroundColor = ConsoleColor.DarkMagenta
+        WriteLine("dark purple")
+        ForegroundColor = ConsoleColor.DarkYellow
+        WriteLine("gold")
+        ForegroundColor = ConsoleColor.Gray
+        WriteLine("gray")
+        ForegroundColor = ConsoleColor.DarkGray
+        WriteLine("dark gray")
+        ForegroundColor = ConsoleColor.Blue
+        WriteLine("blue")
+        ForegroundColor = ConsoleColor.Green
+        WriteLine("green")
+        ForegroundColor = ConsoleColor.Cyan
+        WriteLine("aqua")
+        ForegroundColor = ConsoleColor.Red
+        WriteLine("red")
+        ForegroundColor = ConsoleColor.Magenta
+        WriteLine("light purple")
+        ForegroundColor = ConsoleColor.Yellow
+        WriteLine("yellow")
+        ForegroundColor = ConsoleColor.White
+        WriteLine("white")
+        ForegroundColor = ConsoleColor.Yellow
+        WriteLine("Please enter the team color from one above")
     End Sub
 
 End Module
