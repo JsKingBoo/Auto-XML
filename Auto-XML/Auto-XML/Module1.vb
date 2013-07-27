@@ -115,7 +115,7 @@ Sub MainMenu()
 
         PrintLine(2, "<contributors>")
         PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>")
-        PrintLine(2, "<contributors>")
+        PrintLine(2, "</contributors>")
         Teams()
     End Sub
 
@@ -254,6 +254,7 @@ Sub MainMenu()
         userinputthree = ReadLine()
         PrintLine(2, "<teams>")
         PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
+        PrintLine(2, "</team>")
 
         NewFiletwo()
 
