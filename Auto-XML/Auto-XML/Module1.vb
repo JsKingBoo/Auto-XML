@@ -1,23 +1,24 @@
-﻿Imports System.Environment
+Imports System.Environment
 Imports System.Console
 Module Module1
-    Dim menuoption As Integer
-    Dim userinput As String
-    Dim userinputtwo As String
-    Dim userinputthree As String
-    Sub Main()
-        Dim path As String
+	Dim menuoption As Integer
+	Dim userinput As String
+	Dim userinputtwo As String
+	Dim userinputthree As String
+	'color array. no idea how to do multiline commands -JSKB
+	Dim allTheColors As String() = {"black", "dark blue", "dark green", "dark aqua", "dark red", "dark purple", "gold", "gray", "dark gray", "blue", "green", "aqua", "red", "light purple", "yellow", "while"}
+	
+	Sub Main() 'What happens first
+		Dim path As String 'Is your indent key broken or what?! :P -JSKB
         'Works out if first time setup is needed.
-        path = GetFolderPath(SpecialFolder.MyDocuments)
+        path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
         If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
             FirstTimeSetup()
         Else
             MainMenu()
-
         End If
-
     End Sub
-Sub FirstTimeSetup()
+Sub FirstTimeSetup() 'Makes file path
     Dim path As String
     Dim filename As String
     MsgBox("Performing first time setup...", MsgBoxStyle.Information)
@@ -55,7 +56,6 @@ Sub MainMenu()
         menuoption = Console.ReadLine
         If menuoption = "1" Then
             NewFile()
-
         End If
     End Sub
     Sub NewFile()
@@ -85,41 +85,91 @@ Sub MainMenu()
 
         ReadLine()
         Clear()
+        
+		'File name
         ForegroundColor = ConsoleColor.Blue
         WriteLine("Currently editing file:" & newfilename)
+        
+        'Prints the map proto
+        PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
+        
+        'Name of map
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the name of yor map")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
-        'Prints the map proto.
-        PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
         PrintLine(2, "<name>" & userinput & "</name>")
+        
+        'Map version
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the map version")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<version>" & userinput & "</version>")
+        
+        'Objective
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the objective")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<objective>" & userinput & "</objective>")
+        
+        'Authors
         PrintLine(2, "<authors>")
-        ForegroundColor = ConsoleColor.Yellow
-        WriteLine("Enter the authours name")
-        ForegroundColor = ConsoleColor.Red
-        userinput = ReadLine()
-        PrintLine(2, "<author>")
-        PrintLine(2, "<author>" & userinput & "</author>")
+        AddMoreAuthors()
+        
+        'Adding more than 1 author
+        userinputtwo = "y"
+        Do While userinputtwo.Equals("y")
+        	ForegroundColor = ConsoleColor.Yellow
+        	WriteLine("Would you like to add another author? (Type ""y"" if you would like to, and any other key if you do not)")
+        	ForegroundColor = ConsoleColor.Red
+        	userinputtwo = ReadLine()
+        	If userinputtwo.Equals("y") Then
+        		AddMoreAuthors()
+        	End If
+        Loop
         PrintLine(2, "</authors>")
 
-        PrintLine(2, "<contributors>")
-        PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">" & "sillybillypiggy</contributor>")
+		'Contributors
+		PrintLine(2, "<contributors>")
+		AddContributors()
+        PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">sillybillypiggy</contributor>")
         PrintLine(2, "</contributors>")
+        
         Teams()
+        
     End Sub
-
-
+	
+	Sub AddMoreAuthors()
+        ForegroundColor = ConsoleColor.Yellow
+        WriteLine("Enter the author's name") 'Hooray for grammar. Won't throw an error because quotes
+        ForegroundColor = ConsoleColor.Red
+        userinput = ReadLine()
+        PrintLine(2, "<author>" & userinput & "</author>")
+	End Sub
+	
+	Sub AddContributors()
+		userinputthree = "y"
+        Do While userinputthree.Equals("y")
+        	ForegroundColor = ConsoleColor.Yellow
+        	WriteLine("Would you like to add contributors? (Type ""y"" if you would like to, and any other key if you do not)")
+        	ForegroundColor = ConsoleColor.Red
+        	userinputhree = ReadLine()
+        	If userinputhree.Equals("y") Then
+        		ForegroundColor = ConsoleColor.Yellow
+        		WriteLine("Enter the contributor's name")
+        		ForegroundColor = ConsoleColor.Red
+        		userinput = ReadLine()
+        		ForegroundColor = ConsoleColor.Yellow
+        		WriteLine("Enter the contribution made")
+        		ForegroundColor = ConsoleColor.Red
+        		userinputtwo = ReadLine()
+        		PrintLine(2, "contributor contribution=""" & userinputtwo & """>" & userinput & "</contributor>") 'PROTIP: "" = " when working with strings
+        	End If
+        Loop
+	End Sub
+	
     Sub NewFiletwo()
         Clear()
         WriteLine("Now clearing the console...")
@@ -154,17 +204,19 @@ Sub MainMenu()
         Console.ReadLine()
         End
 
-
     End Sub
+    
     Sub EditFile()
-
+		'LOOOOL I'M EMPTY YEEEAH
     End Sub
+    
     Sub Teams()
         'Teams
         'Using American English :<, but it'll confuse me later if I don't
+        'I'm sorry, but who the ruddy **** are you? ;) -JSKB
 
         WriteLine("Please enter the team colour")
-        WriteLine("Colours:")
+        WriteLine("Colors:")
         ForegroundColor = ConsoleColor.White
         WriteLine("black")
         ForegroundColor = ConsoleColor.DarkBlue
@@ -199,7 +251,10 @@ Sub MainMenu()
         WriteLine("white")
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the team color from one above")
-        'insert checking system later
+        
+        'insert system checking later
+		'Was going to do system checking, but too lazy. Hey, I created an array -JSKB
+        
         userinput = ReadLine()
         ForegroundColor = ConsoleColor.Green
         WriteLine("Please enter the team size")
