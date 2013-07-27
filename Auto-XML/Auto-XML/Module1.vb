@@ -251,12 +251,15 @@ Sub MainMenu()
         WriteLine("Please enter the team color from one above")
         'insert checking system later
         userinput = ReadLine()
-        ForegroundColor = ConsoleColor.Green
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the team size")
+        ForegroundColor = ConsoleColor.Red
         userinputtwo = ReadLine()
-        ForegroundColor = ConsoleColor.Green
+        ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the team name")
+        ForegroundColor = ConsoleColor.Red
         userinputthree = ReadLine()
+        ForegroundColor = ConsoleColor.Yellow
         PrintLine(2, "<teams>")
         PrintLine(2, "<team color =" & Chr(34) & userinput & Chr(34) & "max=" & Chr(34) & userinputtwo & Chr(34) & ">" & userinputthree & "</team>")
         PrintLine(2, "</team>")
