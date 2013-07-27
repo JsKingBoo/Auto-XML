@@ -1,7 +1,7 @@
 Auto-XML
 ========
 
-An automatic XML generator for PGM
+An XML generator for PGM
 
 ## Information
 
@@ -25,4 +25,4 @@ Feel free to make pull requests to add new content
 
 ## Downloading
 
-Check the "releases" on the github repo page, or the forum topic (Not made yet)
+Check the "releases" on the github repo page, or the [forum topic](https://oc.tc/forums/topics/51f2421aaf7fb059f30099ae).
