@@ -98,7 +98,7 @@ Sub MainMenu()
         WriteLine("Please enter the map version")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
-        PrintLine(2, "<version>" & userinput & "<\version>")
+        PrintLine(2, "<version>" & userinput & "</version>")
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the objective")
         ForegroundColor = ConsoleColor.Red
