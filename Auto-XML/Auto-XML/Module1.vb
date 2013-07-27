@@ -109,8 +109,8 @@ Sub MainMenu()
         WriteLine("Enter the authours name")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
+        PrintLine(2, "<author>")
         PrintLine(2, "<author>" & userinput & "</author>")
-        'Add support for mutiple autors using loop
         PrintLine(2, "</authors>")
 
         PrintLine(2, "<contributors>")
