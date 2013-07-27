@@ -121,8 +121,10 @@ Sub MainMenu()
 
 
     Sub NewFiletwo()
+        Clear()
+        WriteLine("Now clearing the console...")
         PrintLine(2, "<kits>")
-
+        Console.WriteLine("Here you can create kits!")
         WriteLine("What is the kit called?")
         userinput = ReadLine()
 
@@ -148,7 +150,10 @@ Sub MainMenu()
     End Sub
     Sub Newfilethree()
         WriteLine("It worked!")
-        ReadLine()
+        Console.WriteLine("That's it for now. Stay tunned to see the latest updates. Coming soon: TDM support, Blitz support, Region support!")
+        Console.ReadLine()
+        End
+
 
     End Sub
     Sub EditFile()
