@@ -202,11 +202,14 @@ Module Module1
         WriteLine("Please choose the gamemode")
         WriteLine("1. TDM")
         WriteLine("2. Blitz")
+        WriteLine("3. Rage (Blitz)")
         userinput = ReadLine()
         If userinput = "1" Then
             TDM()
         ElseIf userinput = "2" Then
             Blitz()
+        ElseIf userinput = "3" Then
+            Rage()
         End If
         End
 
@@ -230,6 +233,18 @@ Module Module1
         PrintLine(2, "<time>" & userinput & "</time>")
         PrintLine("<lives>" & userinputtwo & "</lives>")
         PrintLine(2, "</blitz>")
+    End Sub
+    Sub Rage()
+        WriteLine("How long will the match be?")
+        WriteLine("Please write this in seconds, e.g. 600")
+        userinput = ReadLine()
+        WriteLine("How many lives?")
+        userinputtwo = ReadLine()
+        PrintLine(2, "<blitz>")
+        PrintLine(2, "<time>" & userinput & "</time>")
+        PrintLine("<lives>" & userinputtwo & "</lives>")
+        PrintLine(2, "</blitz>")
+        PrintLine(2, "<rage/>")
     End Sub
 
     Sub EditFile()
