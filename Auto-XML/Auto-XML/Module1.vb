@@ -198,6 +198,7 @@ Module Module1
     End Sub
     Sub Newfilethree()
         WriteLine("It worked!")
+        'Spawns
         Console.WriteLine("That's it for now. Stay tunned to see the latest updates. Coming soon: TDM support, Blitz support, Region support!")
         Console.ReadLine()
         End
@@ -210,7 +211,7 @@ Module Module1
 
     Sub Teams()
         'Teams
-        'Using American English :<, but it'll confuse me later if I don't
+
 
         listColors()
 
@@ -257,7 +258,7 @@ Module Module1
         ForegroundColor = ConsoleColor.White
         WriteLine("black")
         ForegroundColor = ConsoleColor.DarkBlue
-        WriteLine("dark blue (Note: Usually for Blue team)")
+        WriteLine("dark blue")
         ForegroundColor = ConsoleColor.DarkGreen
         WriteLine("dark green")
         ForegroundColor = ConsoleColor.DarkCyan
