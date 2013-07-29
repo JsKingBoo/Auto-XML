@@ -1,49 +1,49 @@
-Imports System.Environment
+﻿Imports System.Environment
 Imports System.Console
 Module Module1
-	Dim menuoption As Integer
-	Dim userinput As String
-	Dim userinputtwo As String
-	Dim userinputthree As String
-	'color array. no idea how to do multiline commands -JSKB
-	Dim allTheColors As String() = {"black", "dark blue", "dark green", "dark aqua", "dark red", "dark purple", "gold", "gray", "dark gray", "blue", "green", "aqua", "red", "light purple", "yellow", "while"}
-	
-Sub Main() 'What happens first
-	Dim path As String 'Is your indent key broken or what?! :P -JSKB
-	'Works out if first time setup is needed.
-	path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
-       	If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
-		FirstTimeSetup()
-	Else
-		MainMenu()
-	End If
-End Sub
-Sub FirstTimeSetup() 'Makes file path
-	Dim path As String
-	Dim filename As String
-		
-	MsgBox("Performing first time setup...", MsgBoxStyle.Information)
-		
-	'Creates folder in "My Documents" for XML files to be placed into.
-	path = GetFolderPath(SpecialFolder.MyDocuments)
+    Dim menuoption As Integer
+    Dim userinput As String
+    Dim userinputtwo As String
+    Dim userinputthree As String
+    'color array. no idea how to do multiline commands -JSKB
+    Dim allTheColors As String() = {"black", "dark blue", "dark green", "dark aqua", "dark red", "dark purple", "gold", "gray", "dark gray", "blue", "green", "aqua", "red", "light purple", "yellow", "while"}
 
-	If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
-		System.IO.Directory.CreateDirectory(path & "\Auto-XML")
-	End If
-		
-	'Creates a CSV file to store filenames in
-	filename = ("\Auto-XML\filenames.csv")
+    Sub Main() 'What happens first
+        Dim path As String 'Is your indent key broken or what?! :P -JSKB
+        'Works out if first time setup is needed.
+        path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
+        If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
+            FirstTimeSetup()
+        Else
+            MainMenu()
+        End If
+    End Sub
+    Sub FirstTimeSetup() 'Makes file path
+        Dim path As String
+        Dim filename As String
 
-	FileOpen(1, path & filename, OpenMode.Output)
-	FileClose(1)
-	
-	WriteLine("First time setup complete")
-	MsgBox("A folder has been created in your documents folder named Auto-XML. It will contain all your XML files, and also some program files.", MsgBoxStyle.Information)
+        MsgBox("Performing first time setup...", MsgBoxStyle.Information)
 
-	MainMenu()
-End Sub
-	
-Sub MainMenu()
+        'Creates folder in "My Documents" for XML files to be placed into.
+        path = GetFolderPath(SpecialFolder.MyDocuments)
+
+        If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
+            System.IO.Directory.CreateDirectory(path & "\Auto-XML")
+        End If
+
+        'Creates a CSV file to store filenames in
+        filename = ("\Auto-XML\filenames.csv")
+
+        FileOpen(1, path & filename, OpenMode.Output)
+        FileClose(1)
+
+        WriteLine("First time setup complete")
+        MsgBox("A folder has been created in your documents folder named Auto-XML. It will contain all your XML files, and also some program files.", MsgBoxStyle.Information)
+
+        MainMenu()
+    End Sub
+
+    Sub MainMenu()
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Welcome to Auto-XML for PGM")
         WriteLine("Designed to help you write XML files")
@@ -57,7 +57,7 @@ Sub MainMenu()
         If menuoption = "1" Then
             NewFile()
         End If
-End Sub
+    End Sub
     Sub NewFile() 'suddenly, indent
         Dim filename As String
         Dim newfilename As String
@@ -65,7 +65,6 @@ End Sub
 
         Console.Clear()
         WriteLine("Please name your new file.")
-        Console.WriteLine("If the program crashes in this process, please re-perform first time setup.")
 
         WriteLine("Enter a file name")
         newfilename = ReadLine()
@@ -85,91 +84,92 @@ End Sub
 
         ReadLine()
         Clear()
-        
-		'File name
+
+        'File name
         ForegroundColor = ConsoleColor.Blue
         WriteLine("Currently editing file:" & newfilename)
-        
+
         'Prints the map proto
         PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.0" & Chr(34) & ">")
-        
+
         'Name of map
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the name of yor map")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<name>" & userinput & "</name>")
-        
+
         'Map version
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the map version")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<version>" & userinput & "</version>")
-        
+
         'Objective
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the objective")
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<objective>" & userinput & "</objective>")
-        
+
         'Authors
         PrintLine(2, "<authors>")
         AddMoreAuthors()
-        
+
         'Adding more than 1 author
         userinputtwo = "y"
         Do While userinputtwo.Equals("y")
-        	ForegroundColor = ConsoleColor.Yellow
-        	WriteLine("Would you like to add another author? (Type ""y"" if you would like to, and any other key if you do not)")
-        	ForegroundColor = ConsoleColor.Red
-        	userinputtwo = ReadLine()
-        	If userinputtwo.Equals("y") Then
-        		AddMoreAuthors()
-        	End If
+            ForegroundColor = ConsoleColor.Yellow
+            WriteLine("Would you like to add another author? (Type ""y"" if you would like to, and any other key if you do not)")
+            ForegroundColor = ConsoleColor.Red
+            userinputtwo = ReadLine()
+            If userinputtwo.Equals("y") Then
+                AddMoreAuthors()
+            End If
         Loop
         PrintLine(2, "</authors>")
 
-		'Contributors
-		PrintLine(2, "<contributors>")
-		AddContributors()
+        'Contributors
+        PrintLine(2, "<contributors>")
+        AddContributors()
         PrintLine(2, "<contributor contribution=" & Chr(34) & "XML coding (Auto-XML)" & Chr(34) & ">sillybillypiggy</contributor>")
         PrintLine(2, "</contributors>")
-        
+
         Teams()
-        
+
     End Sub
-	
-	Sub AddMoreAuthors()
+
+    Sub AddMoreAuthors()
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Enter the author's name") 'Hooray for grammar. Won't throw an error because quotes
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         PrintLine(2, "<author>" & userinput & "</author>")
-	End Sub
-	
-	Sub AddContributors()
-		userinputthree = "y"
+    End Sub
+
+    Sub AddContributors()
+        Dim userinputhree As String
+        userinputthree = "y"
         Do While userinputthree.Equals("y")
-        	ForegroundColor = ConsoleColor.Yellow
-        	WriteLine("Would you like to add contributors? (Type ""y"" if you would like to, and any other key if you do not)")
-        	ForegroundColor = ConsoleColor.Red
-        	userinputhree = ReadLine()
-        	If userinputhree.Equals("y") Then
-        		ForegroundColor = ConsoleColor.Yellow
-        		WriteLine("Enter the contributor's name")
-        		ForegroundColor = ConsoleColor.Red
-        		userinput = ReadLine()
-        		ForegroundColor = ConsoleColor.Yellow
-        		WriteLine("Enter the contribution made")
-        		ForegroundColor = ConsoleColor.Red
-        		userinputtwo = ReadLine()
-        		PrintLine(2, "contributor contribution=""" & userinputtwo & """>" & userinput & "</contributor>") 'PROTIP: "" = " when working with strings
-        	End If
+            ForegroundColor = ConsoleColor.Yellow
+            WriteLine("Would you like to add contributors? (Type ""y"" if you would like to, and any other key if you do not)")
+            ForegroundColor = ConsoleColor.Red
+            userinputhree = ReadLine()
+            If userinputhree.Equals("y") Then
+                ForegroundColor = ConsoleColor.Yellow
+                WriteLine("Enter the contributor's name")
+                ForegroundColor = ConsoleColor.Red
+                userinput = ReadLine()
+                ForegroundColor = ConsoleColor.Yellow
+                WriteLine("Enter the contribution made")
+                ForegroundColor = ConsoleColor.Red
+                userinputtwo = ReadLine()
+                PrintLine(2, "contributor contribution=""" & userinputtwo & """>" & userinput & "</contributor>") 'PROTIP: "" = " when working with strings
+            End If
         Loop
-	End Sub
-	
+    End Sub
+
     Sub NewFiletwo()
         Clear()
         WriteLine("Now clearing the console...")
@@ -205,20 +205,20 @@ End Sub
         End
 
     End Sub
-    
+
     Sub EditFile()
-		'LOOOOL I'M EMPTY YEEEAH
+        'LOOOOL I'M EMPTY YEEEAH
     End Sub
-    
+
     Sub Teams()
         'Teams
         'Using American English :<, but it'll confuse me later if I don't
 
-	listColors()
-        
+        listColors()
+
         'insert system checking later
-	'Was going to do system checking, but too lazy. Hey, I created an array -JSKB
-        
+        'Was going to do system checking, but too lazy. Hey, I created an array -JSKB
+
         userinput = ReadLine()
         ForegroundColor = ConsoleColor.Green
         WriteLine("Please enter the team size")
@@ -232,8 +232,8 @@ End Sub
         'Teams
         'Using American English :<, but it'll confuse me later if I don't
 
-        listColors
-        
+        listColors()
+
         'insert checking system later
         userinput = ReadLine()
         ForegroundColor = ConsoleColor.Yellow
@@ -252,9 +252,9 @@ End Sub
         NewFiletwo()
 
     End Sub
-    
+
     Sub listColors()
-    	WriteLine("Please enter the team colour")
+        WriteLine("Please enter the team colour")
         WriteLine("Colors:")
         ForegroundColor = ConsoleColor.White
         WriteLine("black")
