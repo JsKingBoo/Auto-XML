@@ -23,6 +23,10 @@ An XML generator for PGM
 
 Feel free to make pull requests to add new content
 
+## People that have helped
+
+* [JsKingBoo](www.github.com/JsKingBoo)
+
 ## Downloading
 
 Check the "releases" on the github repo page, or the [forum topic](https://oc.tc/forums/topics/51f2421aaf7fb059f30099ae).
