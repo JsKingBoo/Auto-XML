@@ -201,10 +201,12 @@ Module Module1
 
         WriteLine("Please choose the gamemode")
         WriteLine("1. TDM")
+        WriteLine("2. Blitz")
         userinput = ReadLine()
         If userinput = "1" Then
             TDM()
-
+        ElseIf userinput = "2" Then
+            Blitz()
         End If
         End
 
@@ -214,9 +216,20 @@ Module Module1
         WriteLine("Please write this in seconds, e.g. 600")
         userinput = ReadLine()
         PrintLine(2, "<score>")
-        PrintLine(2, "<time>600</time>")
+        PrintLine(2, "<time>" & userinput & "</time>")
         PrintLine(2, "</score>")
 
+    End Sub
+    Sub Blitz()
+        WriteLine("How long will the match be?")
+        WriteLine("Please write this in seconds, e.g. 600")
+        userinput = ReadLine()
+        WriteLine("How many lives?")
+        userinputtwo = ReadLine()
+        PrintLine(2, "<blitz>")
+        PrintLine(2, "<time>" & userinput & "</time>")
+        PrintLine("<lives>" & userinputtwo & "</lives>")
+        PrintLine(2, "</blitz>")
     End Sub
 
     Sub EditFile()
