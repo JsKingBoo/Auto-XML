@@ -11,6 +11,7 @@ Module Module1
     Sub Main() 'What happens first
         Dim path As String 'Is your indent key broken or what?! :P -JSKB
         'Works out if first time setup is needed.
+
         path = GetFolderPath(SpecialFolder.MyDocuments) 'File **** I'm not messing with - JSKB
         If (Not System.IO.Directory.Exists(path & "\Auto-XML")) Then
             FirstTimeSetup()
@@ -221,7 +222,7 @@ Module Module1
         PrintLine(2, "<score>")
         PrintLine(2, "<time>" & userinput & "</time>")
         PrintLine(2, "</score>")
-
+        EndXML()
     End Sub
     Sub Blitz()
         WriteLine("How long will the match be?")
@@ -233,6 +234,7 @@ Module Module1
         PrintLine(2, "<time>" & userinput & "</time>")
         PrintLine("<lives>" & userinputtwo & "</lives>")
         PrintLine(2, "</blitz>")
+        EndXML()
     End Sub
     Sub Rage()
         WriteLine("How long will the match be?")
@@ -245,6 +247,14 @@ Module Module1
         PrintLine("<lives>" & userinputtwo & "</lives>")
         PrintLine(2, "</blitz>")
         PrintLine(2, "<rage/>")
+        EndXML()
+    End Sub
+    Sub EndXML()
+        PrintLine(2, "</map>")
+        WriteLine("</map>")
+        MsgBox("XML finished, or at least as much as this program does. Visit docs.oc.tc to find out about other modules and add them to the basic XML you have. You can find the file you created in MyDocuments\Auto-XML\WhateverYouNamedThis.", MsgBoxStyle.OkOnly)
+        FileClose(2)
+        End
     End Sub
 
     Sub EditFile()
