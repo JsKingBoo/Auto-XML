@@ -198,10 +198,18 @@ Module Module1
     End Sub
     Sub Newfilethree()
         WriteLine("It worked!")
-        'Spawns
-        Console.WriteLine("That's it for now. Stay tunned to see the latest updates. Coming soon: TDM support, Blitz support, Region support!")
-        Console.ReadLine()
+
+        WriteLine("Please choose the gamemode")
+        WriteLine("1. TDM")
+        userinput = ReadLine()
+        If userinput = "1" Then
+            TDM()
+
+        End If
         End
+
+    End Sub
+    Sub TDM()
 
     End Sub
 
