@@ -210,6 +210,12 @@ Module Module1
 
     End Sub
     Sub TDM()
+        WriteLine("How long will the match be?")
+        WriteLine("Please write this in seconds, e.g. 600")
+        userinput = ReadLine()
+        PrintLine(2, "<score>")
+        PrintLine(2, "<time>600</time>")
+        PrintLine(2, "</score>")
 
     End Sub
 
