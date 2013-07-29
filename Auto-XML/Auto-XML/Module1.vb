@@ -49,8 +49,6 @@ Module Module1
         WriteLine("Designed to help you write XML files")
         ForegroundColor = ConsoleColor.Gray
         WriteLine("Press 1 to create a new XML file")
-        WriteLine("Press 2 to add to an XML file")
-        ForegroundColor = ConsoleColor.Red
         WriteLine("Press 3 to exit")
         ForegroundColor = ConsoleColor.Yellow
         menuoption = Console.ReadLine
@@ -207,7 +205,7 @@ Module Module1
     End Sub
 
     Sub EditFile()
-        'LOOOOL I'M EMPTY YEEEAH
+        'Do later... Much Later!
     End Sub
 
     Sub Teams()
