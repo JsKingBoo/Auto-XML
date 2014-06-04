@@ -92,7 +92,7 @@ Sub MainMenu()
         ForegroundColor = ConsoleColor.Red
         userinput = ReadLine()
         'Prints the map proto.
-        PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.1" & Chr(34) & ">")
+        PrintLine(2, "<" & "map proto=" & Chr(34) & "1.3.2" & Chr(34) & ">")
         PrintLine(2, "<name>" & userinput & "</name>")
         ForegroundColor = ConsoleColor.Yellow
         WriteLine("Please enter the map version")
